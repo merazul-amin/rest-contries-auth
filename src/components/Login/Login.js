@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useLocation, useNavigate } from 'react-router-dom';
+import ResetPassword from '../ResetPassword/ResetPassword';
 import { AuthContext } from '../UserContext/UserContext';
 const Login = () => {
-
+    const [modalShow, setModalShow] = React.useState(false);
     const { logIn } = useContext(AuthContext);
 
 
@@ -29,6 +30,12 @@ const Login = () => {
     }
     return (
         <div className='w-50 mx-auto'>
+
+            <ResetPassword
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
+
             <h1>Login Now</h1>
             <Form onSubmit={handleLogin}>
 
@@ -47,7 +54,9 @@ const Login = () => {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <p>Forgot password?   </p>
+                    <p>Forgot password? <Button variant="link" onClick={() => setModalShow(true)}>
+                        Reset Now.
+                    </Button>  </p>
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
                 <Button variant="primary" type="submit">
