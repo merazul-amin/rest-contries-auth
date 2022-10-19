@@ -1,0 +1,16 @@
+header {
+    height: 80vh;
+}
+
+header>div {
+    height: 100%;
+    background-image: url('https://mdbootstrap.com/img/new/slides/041.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
+
+.text-bgg {
+    height: 100%;
+    border-radius: 20px;
+}
