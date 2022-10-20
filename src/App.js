@@ -4,7 +4,7 @@ import routes from './components/Routes/routes';
 
 function App() {
   return (
-    <div className="container mx-auto">
+    <div className="">
       <RouterProvider router={routes}>
 
       </RouterProvider>

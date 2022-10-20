@@ -9,7 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 const routes = createBrowserRouter([
     {
         path: '/',
-        // loader: () => fetch('https://restcountries.com/v3.1/all'),
+        loader: () => fetch('https://restcountries.com/v3.1/all'),
         element: <Layout></Layout>,
         children: [
             { path: '/', element: <Home></Home> },
